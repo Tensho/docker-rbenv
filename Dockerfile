@@ -10,3 +10,7 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Install ruby-build
 RUN git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# Configure special environment variables
+# https://github.com/sstephenson/ruby-build#special-environment-variables
+ENV CONFIGURE_OPTS --disable-install-doc
