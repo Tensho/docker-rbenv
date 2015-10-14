@@ -7,7 +7,6 @@ MAINTAINER Andrew Babichev <andrew.babichev@gmail.com>
 ENV RBENV_ROOT /root/.rbenv
 RUN git clone https://github.com/sstephenson/rbenv.git $RBENV_ROOT
 RUN git clone https://github.com/sstephenson/ruby-build.git $RBENV_ROOT/plugins/ruby-build
-RUN $RBENV_ROOT/plugins/ruby-build/install.sh
 ENV PATH $RBENV_ROOT/bin:$PATH
 RUN echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
 
